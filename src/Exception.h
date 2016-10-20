@@ -6,9 +6,6 @@ enum class Exception : unsigned char {
 	UNDEF_INSTR = 0x01
 };
 
-
 void handleException(Exception e);
-
-
 
 #endif

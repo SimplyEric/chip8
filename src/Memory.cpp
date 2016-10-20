@@ -1,5 +1,6 @@
 #include "Memory.h"
 
+
 Memory::Memory() 
 {
 	memory.reserve(0x1000);
@@ -34,5 +35,3 @@ void Memory::write(u8 addr, u8 val)
 {
 	memory[addr] = val;
 }
-
-
