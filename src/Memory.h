@@ -4,21 +4,18 @@
 #include "global_typedefs.h"
 #include <vector>
 #include <tuple>
+#include <stack>
 
 
-class Memory {
-public:
+struct Memory 
+{
+	u16 pc;
+	std::vector<u8> mem;
+	std::vector<u8> reg;
+	std::stack<u16> stack;
+
 	Memory();
-	~Memory();
-	void advance_pc();
-	void jump_pc(u8 addr);
 	std::tuple<u8, u8> get_instruction();
-	u8 read(u8 addr);
-	void write(u8 addr, u8 val);
-
-private:
-	std::vector<unsigned char> memory;
-	u16 program_counter;
 };
 
 #endif

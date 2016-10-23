@@ -8,7 +8,7 @@
 
 namespace Instruction
 {
-	#define ARGS (u8 n1, u8 n2, u8 n3, u8 n4)
+	#define ARGS (Memory mem, u8 n1, u8 n2, u8 n3, u8 n4)
 	
 	void ADD ARGS;
 	void AND ARGS;

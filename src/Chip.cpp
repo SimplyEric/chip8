@@ -21,7 +21,7 @@ void Chip::exec_instr_and_advance_pc()
 	   n3 = (std::get<1>(instruction) & ((u8) ~0x0 << 4)) >> 4,
 	   n4 = std::get<1>(instruction) & ((u8) ~0x0 >> 4);
 
-	#define ARGS (n1,n2,n3,n4)
+	#define ARGS (this->memory,n1,n2,n3,n4)
 
 	try 
 	{
